@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>peers — encrypted comms that keeps working when the network doesn't</title>
+<meta name="description" content="Peers is an encrypted, decentralised messenger for Android that keeps working when the network doesn't — over Logos, MeshCore (LoRa) and Bluetooth mesh.">
+<link rel="icon" href="icon.png">
+<meta property="og:title" content="peers">
+<meta property="og:description" content="You cannot be deplatformed if there is no platform.">
+<meta property="og:image" content="https://peers.tech/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://peers.tech">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --canvas:#0A0A0A; --pane:#111; --panel:#161616; --border:#2a2a2a;
+    --text:#FAFAFA; --dim:#8b8f98; --faint:#5b616b;
+    --orange:#FF5000; --green:#22C55E; --blue:#1D9BF0; --red:#EF4444;
+    --mono:"SF Mono",ui-monospace,"JetBrains Mono","Roboto Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--canvas);color:var(--text);
+    font-family:var(--sans);line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:620px;margin:0 auto;padding:72px 24px 56px}
+  /* hero */
+  .hero{text-align:center}
+  .icon{width:96px;height:96px;border-radius:22px;display:block;margin:0 auto 26px;
+    box-shadow:0 0 0 1px var(--border), 0 18px 50px -12px rgba(255,80,0,.28)}
+  .brand{font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:-.02em;margin:0}
+  .ver{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:6px}
+  h1{font-size:clamp(28px,7vw,40px);line-height:1.12;letter-spacing:-.02em;
+    font-weight:800;margin:30px 0 0}
+  .lede{color:var(--dim);font-size:clamp(16px,4vw,18px);margin:16px auto 0;max-width:34ch}
+  /* cta */
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:14px;
+    font-weight:600;text-decoration:none;padding:13px 20px;border-radius:12px;
+    border:1px solid transparent;transition:transform .12s ease,background .12s ease,border-color .12s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-primary:hover{background:#ff6a24}
+  .btn-ghost{background:transparent;color:var(--text);border-color:var(--border)}
+  .btn-ghost:hover{border-color:#3d3d3d;background:#131313}
+  .hint{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:14px}
+  /* features */
+  .features{margin-top:64px;display:flex;flex-direction:column;gap:16px}
+  .f{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--c);
+    border-radius:14px;padding:20px 22px}
+  .f .kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--c);margin:0 0 8px}
+  .f h2{font-size:18px;line-height:1.25;margin:0 0 8px;font-weight:700}
+  .f p{margin:0;color:var(--dim);font-size:15px}
+  /* footer */
+  footer{margin-top:60px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--faint)}
+  footer a{color:var(--dim);text-decoration:none}
+  footer a:hover{color:var(--text)}
+  footer .sep{opacity:.4;margin:0 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="icon" src="icon.png" alt="Peers app icon">
+    <p class="brand">peers</p>
+    <p class="ver">alpha · v0.7.61</p>
+    <h1>You cannot be deplatformed if there is no platform.</h1>
+    <p class="lede">Encrypted decentralised comms that keeps working when the network doesn't.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://xalisher.github.io/fdroid/repo?fingerprint=9283C4E3DAB31E68675B643AE38222358541431AD07295B6DF4A4C6D2ACCCF32">Join the alpha on F-Droid</a>
+      <a class="btn btn-ghost" href="https://github.com/xAlisher/logos-chat-android">GitHub</a>
+    </div>
+    <p class="hint">Add the repo in F-Droid, then install Peers · Android · no account, no Google</p>
+  </header>
+
+  <main class="features">
+    <section class="f" style="--c:var(--orange)">
+      <p class="kick">Logos ↔ MeshCore</p>
+      <h2>Mirroring across transports</h2>
+      <p>When cellular and Wi-Fi go down, the group keeps coordinating over mesh — same conversation, different transport.</p>
+    </section>
+
+    <section class="f" style="--c:var(--green)">
+      <p class="kick">One radio is enough</p>
+      <h2>One of you has signal — that's enough</h2>
+      <p>Some members are mesh-only. As long as one member has both mesh and internet, everyone can still reach each other.</p>
+    </section>
+
+    <section class="f" style="--c:var(--blue)">
+      <p class="kick">Offline</p>
+      <h2>BLE mesh and local discovery</h2>
+      <p>No internet at all? Keep chatting over Bluetooth mesh with the same identities.</p>
+    </section>
+
+    <section class="f" style="--c:var(--red)">
+      <p class="kick">Under duress</p>
+      <h2>"Yes, I'll enter my PIN"</h2>
+      <p>Enter your duress PIN to silently wipe the database and generate a fresh identity. It looks like a normal unlock.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://github.com/xAlisher/logos-chat-android">source</a>
+    <span class="sep">·</span>
+    <a href="https://xalisher.github.io/fdroid">F-Droid repo</a>
+    <span class="sep">·</span>
+    <span>MIT</span>
+    <span class="sep">·</span>
+    <span>built on Logos</span>
+  </footer>
+
+</div>
+</body>
+</html>
