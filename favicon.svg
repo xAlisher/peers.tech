@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" shape-rendering="geometricPrecision">
+<rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="#0a0a0a"/>
+<path d="M96 108 Q96 96 108 96 L160 96 L160 160 L96 160 Z" fill="#b8420e"/>
+<rect x="160" y="96" width="64" height="64" fill="#ff7a33"/>
+<rect x="224" y="96" width="64" height="64" fill="#ff7a33"/>
+<rect x="288" y="96" width="64" height="64" fill="#ff7a33"/>
+<path d="M352 96 L404 96 Q416 96 416 108 L416 160 L352 160 Z" fill="#b8420e"/>
+<rect x="96" y="160" width="64" height="64" fill="#ff7a33"/>
+<rect x="160" y="160" width="64" height="64" fill="#ffdfc8"/>
+<rect x="224" y="160" width="64" height="64" fill="#ff5000"/>
+<rect x="288" y="160" width="64" height="64" fill="#ffdfc8"/>
+<rect x="352" y="160" width="64" height="64" fill="#ff7a33"/>
+<rect x="160" y="224" width="64" height="64" fill="#b8420e"/>
+<rect x="288" y="224" width="64" height="64" fill="#b8420e"/>
+<rect x="96" y="288" width="64" height="64" fill="#ff7a33"/>
+<rect x="224" y="288" width="64" height="64" fill="#b8420e"/>
+<rect x="352" y="288" width="64" height="64" fill="#ff7a33"/>
+<rect x="224" y="352" width="64" height="64" fill="#ff7a33"/>
+</svg>
